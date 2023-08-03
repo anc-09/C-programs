@@ -1,0 +1,54 @@
+/C program to find dimensions of rectangle and circle
+#include <stdio.h>
+
+int main() {
+    int opt,l,b,a,p,n;
+    float ar,r,c,d;
+    printf("\n Press 1-Rectangle 2-Circle ");
+    scanf("%d",&opt);
+    switch(opt)
+    {
+        case 1:
+        printf("\n Enter length of rectangle");
+        scanf("%d",&l);
+        printf("\n Enter breadth of rectangle");
+        scanf("%d",&b);
+        printf("\nPress 1-Area 2- Perimeter");
+        scanf("%d",&n);
+        switch(n)
+        {
+            case 1:
+            a=l*b;
+            printf("\nArea is %d",a);
+            break;
+            case 2:
+            p=2*(l+b);
+            printf("\n perimeter is %d",p);
+        }
+        break;
+        case 2:
+        printf("\nEnter Radius:");
+        scanf("%f",&r);
+        printf("\n Press 1-Diameter 2-Area 3-Circumference:");
+        scanf("%d",&n);
+        switch(n)
+        {
+            case 1:
+            d=2*r;
+            printf("\nDiameter is %f",d);
+            break;
+            case 2:
+            ar=3.14*r*r;
+            printf("\nArea is %f",ar);
+            break;
+            case 3:
+            c=2*3.14*r;
+            printf("\n Circumference is %f",c);
+            break;
+            default;
+        }
+        break;
+        
+    }
+    return 0;
+}
